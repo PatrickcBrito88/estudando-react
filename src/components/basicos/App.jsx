@@ -8,8 +8,12 @@ import './App.css'
 import Familia from "./Familia";
 import FamilaMembro from "./FamilaMembro";
 import ListaAlunos from "../repeticao/ListaAlunos";
-import DesafioTabela from "../repeticao/TabelaProdutos";
 import TabelaProdutos from "../repeticao/TabelaProdutos";
+import ParOuImpar from "../condicional/ParOuImpar";
+import UsuarioInfo from "../condicional/UsuarioInfo";
+import DiretaPai from "../comunicacao/DiretaPai";
+import IndiretaPai from "../comunicacao/IndiretaPai";
+import Input from "../formulario/Input";
 
 export default () => (
     <div className="App">
@@ -17,6 +21,25 @@ export default () => (
         <h2>Fundamentos básicos Arrow</h2>
 
         <div className="Cards">
+
+            <Card titulo="#11 - Componente Controlado" color="#9400D3">
+                <Input></Input>
+            </Card>
+
+            <Card titulo="#10 - Comunicação Indireta" color="#D2691E">
+                <IndiretaPai></IndiretaPai>
+            </Card>
+
+            <Card titulo="#09 - Comunicação Direta" color="#00DD36">
+              <DiretaPai></DiretaPai>
+            </Card>
+
+            <Card titulo="#08 - Renderização Condicional" color="#00A212">
+                <ParOuImpar numero={20}></ParOuImpar>
+                <UsuarioInfo usuario={{nome: 'Fernando' }}></UsuarioInfo>
+                <UsuarioInfo usuario={{email: 'fer@gmail.com' }}></UsuarioInfo>
+                <UsuarioInfo/>
+            </Card>
 
             <Card titulo="#07 - Desafio Repetição" color="#00D3A28">
                 <TabelaProdutos></TabelaProdutos>
