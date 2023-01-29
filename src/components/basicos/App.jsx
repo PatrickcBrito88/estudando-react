@@ -14,6 +14,8 @@ import UsuarioInfo from "../condicional/UsuarioInfo";
 import DiretaPai from "../comunicacao/DiretaPai";
 import IndiretaPai from "../comunicacao/IndiretaPai";
 import Input from "../formulario/Input";
+import Contador from "../contador/Contador";
+import Mega from "../mega/Mega";
 
 export default () => (
     <div className="App">
@@ -21,6 +23,14 @@ export default () => (
         <h2>Fundamentos básicos Arrow</h2>
 
         <div className="Cards">
+
+            <Card titulo="#13 - Mega Sena" color="#B9006E">
+                <Mega qtde={8}></Mega>
+            </Card>
+
+            <Card titulo="#12 - Contador" color="#4501A8">
+                <Contador numeroInicial={10}></Contador>
+            </Card>
 
             <Card titulo="#11 - Componente Controlado" color="#9400D3">
                 <Input></Input>
@@ -31,13 +41,13 @@ export default () => (
             </Card>
 
             <Card titulo="#09 - Comunicação Direta" color="#00DD36">
-              <DiretaPai></DiretaPai>
+                <DiretaPai></DiretaPai>
             </Card>
 
             <Card titulo="#08 - Renderização Condicional" color="#00A212">
                 <ParOuImpar numero={20}></ParOuImpar>
-                <UsuarioInfo usuario={{nome: 'Fernando' }}></UsuarioInfo>
-                <UsuarioInfo usuario={{email: 'fer@gmail.com' }}></UsuarioInfo>
+                <UsuarioInfo usuario={{nome: 'Fernando'}}></UsuarioInfo>
+                <UsuarioInfo usuario={{email: 'fer@gmail.com'}}></UsuarioInfo>
                 <UsuarioInfo/>
             </Card>
 
@@ -46,34 +56,32 @@ export default () => (
             </Card>
 
             <Card titulo="#06 - Lista Alunos Com Repetição" color="#00C8F8">
-               <ListaAlunos></ListaAlunos>
+                <ListaAlunos></ListaAlunos>
             </Card>
 
             <Card titulo="#05 - Componentes com Filhos" color="#00D9B4">
-                <Familia sobrenome="Ferreira" >
-                    <FamilaMembro nome="Pedro" />
-                    <FamilaMembro nome="João" />
-                    <FamilaMembro nome="Maria" />
+                <Familia sobrenome="Ferreira">
+                    <FamilaMembro nome="Pedro"/>
+                    <FamilaMembro nome="João"/>
+                    <FamilaMembro nome="Maria"/>
                 </Familia>
             </Card>
 
-            <div className="Cards">
-                <Card titulo="#04 -Desafio Aleatório" color="#FA6900">
-                    <Aleatorio minimo={1} maximo={10}/>
-                </Card>
+            <Card titulo="#04 -Desafio Aleatório" color="#FA6900">
+                <Aleatorio minimo={1} maximo={10}/>
+            </Card>
 
-                <Card titulo="#03 -Fragmento" color="#E94C6F">
-                    <Fragmento/>
-                </Card>
+            <Card titulo="#03 -Fragmento" color="#E94C6F">
+                <Fragmento/>
+            </Card>
 
-                <Card titulo="#02 -Segundo Componente" color="#E8B71A">
-                    <ComParametro titulo="Segundo Componente" aluno="Patrick" nota={9.3} status="Aprovado"/>
-                </Card>
+            <Card titulo="#02 -Segundo Componente" color="#E8B71A">
+                <ComParametro titulo="Segundo Componente" aluno="Patrick" nota={9.3} status="Aprovado"/>
+            </Card>
 
-                <Card titulo="#01 - Primeiro Componente" color="#588C73">
-                    <Primeiro></Primeiro>
-                </Card>
-            </div>
+            <Card titulo="#01 - Primeiro Componente" color="#588C73">
+                <Primeiro></Primeiro>
+            </Card>
         </div>
     </div>
 )

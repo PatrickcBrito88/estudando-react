@@ -1,0 +1,28 @@
+.Mega input {
+    font-size: 1.4rem;
+    width: 50px;
+    border: 0px;
+}
+
+.Mega label {
+    margin-right: 7px;
+}
+
+.Mega button {
+    border-radius: 30px;
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+.Mega .Titulo {
+    margin: 15px;
+}
+
+.Mega .Numeros {
+    margin: 15px;
+    color: red;
+}
+
+.Mega .QuantidadeNumeros {
+    margin: 15px;
+}
